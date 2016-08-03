@@ -14,12 +14,13 @@
 	<!--index.css-->
 	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
 
-	<link href="htmlfile/css/bootstrap.min.css" rel="stylesheet">
-	<link href="htmlfile/css/datepicker3.css" rel="stylesheet">
-	<link href="htmlfile/css/styles.css" rel="stylesheet">
+	<link href="frontend/css/bootstrap.min.css" rel="stylesheet">
+	<link href="frontend/css/datepicker3.css" rel="stylesheet">
+	<link href="frontend/css/styles.css" rel="stylesheet">
 
 	<!-- js -->
-	<script type="text/javascript" src="htmlfile/script/runner.js"></script>
+	<script type="text/javascript" src="frontend/script/runner.js"></script>
+	<script type="text/javascript" src="frontend/script/movable.js"></script>
 
 </head>
 
@@ -70,8 +71,8 @@
 
 	<div class="row">
 		<div class="col-sm-6 col-md-6  col-lg-6">
-			<button type="button" class="btn btn-default">HISTORY</button>
-			<button type="button" class="btn btn-danger">REPORT</button>
+			<button id="history-btn" type="button" class="btn btn-default">HISTORY</button>
+			<button id="report-btn" onclick="window.location = '/frontend/tables.html';" type="button" class="btn btn-danger">REPORT</button>
 		</div>
 	</div>
 	</div>
