@@ -1,0 +1,10 @@
+.navbar{
+	height: 60px;
+}
+body{
+	padding-top: 90px;
+}
+.navbar-brand{
+	line-height: 30px;
+	font-size: 1.2em !important;
+}

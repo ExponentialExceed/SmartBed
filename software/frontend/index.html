@@ -5,16 +5,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8">
 
-	<title>SMART BUS</title>
+	<title>SMART BED</title>
 
-	<link href="frontend/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="frontend/css/bootstrap.min.css" rel="stylesheet">
 	<link href="frontend/css/datepicker3.css" rel="stylesheet">
 	<link href="frontend/css/styles.css" rel="stylesheet">
+	<link href="frontend/css/smartbed.css" rel="stylesheet">
 
 	<!-- jquery -->
 	<script type="text/javascript" src="frontend/framework/jquery-3.1.0.min.js"></script>
 	<!-- custom-js -->
+
 	<script type="text/javascript" src="frontend/script/runner.js"></script>
 
 	<script src="frontend/script/chart.min.js"></script>
@@ -27,9 +28,13 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
+		    	<a class="navbar-brand" href="/">Smart Bed</a>
 				<span id="time-label" class="navbar-brand"></span>
 			</div>
+		</div>
 	</nav>
+
+
 	<div class="container">
 	<div class="row">
 		<div class="col-lg-12">
@@ -53,11 +58,9 @@
 		<a href="#" class="pull-right"></a>
 	</div>
 
-	<div class="row">
-		<div class="col-sm-6 col-md-6  col-lg-6">
-			<button id="history-btn" onclick="window.location = '/frontend/history.html';" type="button" class="btn btn-default">HISTORY</button>
-			<button id="report-btn" onclick="window.location = '/frontend/tables.html';" type="button" class="btn btn-danger">REPORT</button>
-		</div>
+	<div class="container">
+		<button id="history-btn" onclick="window.location = '/frontend/history.html';" type="button" class="btn btn-default">HISTORY</button>
+		<button id="report-btn" onclick="window.location = '/frontend/tables.html';" type="button" class="btn btn-danger">REPORT</button>
 	</div>
 	</div>
 	<!--/.main-->
