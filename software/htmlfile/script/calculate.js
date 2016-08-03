@@ -54,11 +54,11 @@ var checkSound = function(value) {
 }
 
 var checkMotion = function(value) {
-  // have sound
-  if (value) {
+    // have motion
+    if (value) {
 
-      // no have sound
-  } else {
+        // no have motion
+    } else {
 
-  }
+    }
 }
