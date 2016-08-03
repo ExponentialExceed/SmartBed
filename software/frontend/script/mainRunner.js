@@ -1,6 +1,5 @@
 var obj = null;
 var currentID = 0;
-var timeLabel = $('#time-label');
 var i = 0;
 var k = 0;
 
@@ -31,7 +30,7 @@ $(document).ready(function() {
 
         // time
         var date = new Date();
-        timeLabel.text(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "   " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
+        $('#time-label').text(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "   " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
     }, 3000);
 });
 

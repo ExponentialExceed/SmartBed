@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="framework/jquery-3.1.0.min.js"></script>
 
 	<!-- custom-js -->
-	<script type="text/javascript" src="script/Runner.js"></script>
+	<script type="text/javascript" src="script/runner.js"></script>
 </head>
 
 <body>
@@ -47,7 +47,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading">Log data</div>
 				<div class="panel-body">
-					<table id="table" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+					<table id="table" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="false" data-sort-name="name" data-sort-order="desc">
 						<thead>
 							<tr>
 								<th data-field="time" data-sortable="true">Time</th>
@@ -61,29 +61,10 @@
 			</div>
 		</div>
 	</div>
-	<!--/.row-->
-	<!--/.row-->
-
-	<div class="col-md-12">
-		<div class="panel panel-primary">
-			<div class="panel-heading">
-				Primary Panel
-			</div>
-			<div class="panel-body">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui pharetra molestie. Fusce et dui
-					urna.
-				</p>
-			</div>
-		</div>
-	</div>
 
 
 
 	</div>
-	<script>
-		var table = $("#table");
-		var timeLabel = $('#time-label');
-	</script>
 	<script src="script/bootstrap.min.js"></script>
 	<script src="script/chart.min.js"></script>
 	<script src="script/chart-data.js"></script>
