@@ -22,22 +22,36 @@
 	<script type="text/javascript" src="frontend/script/runner.js"></script>
 	<script type="text/javascript" src="frontend/script/movable.js"></script>
 
+
+	<script src="frontend/script/chart.min.js"></script>
+	<script src="frontend/script/chart-data.js"></script>
+	<script src="frontend/script/easypiechart.js"></script>
+	<script src="frontend/script/easypiechart-data.js"></script>
+
+	<script>
+		!function ($) {
+		    $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+		        $(this).find('em:first').toggleClass("glyphicon-minus");
+		    });
+		    $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>
+
 </head>
 
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
 				<span id="time-label" class="navbar-brand"></span>
-
 			</div>
-			<!-- /.container-fluid -->
 	</nav>
 
 	<div class="row">
@@ -53,7 +67,7 @@
 				<div class="panel-heading">Overview</div>
 				<div class="panel-body">
 					<div class="canvas-wrapper">
-						<canvas class="main-chart" id="line-chart"></canvas>
+						<canvas class="main-chart" id="line-chart" height="200" width="600"></canvas>
 					</div>
 				</div>
 			</div>
