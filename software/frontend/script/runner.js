@@ -14,12 +14,11 @@ $(document).ready(function() {
         // server
         $.ajax({url: 'http://10.32.176.4/Exponential'}).done(function(data) {
             // TODO: add information to web
-            obj = JSON.parse(data);
+            obj = JSON.parse(data)[0];
             var table = $("#table");
             if (obj.id != currentID) {
-                for (var i = 0; i < obj.length; i++) {
-                    table.append('<tr><td style>' + obj[i].time + '<\/td> <td style>' + obj[i].temp + '<\/td> <td style>' + obj[i].snore + '<\/td><td style>' + obj[i].humid + '<\/td><td style>' + obj[i].status + '<\/td></tr>');
-                }
+            console.log(table);
+            table.append('<tr><td style>' + obj.time + '<\/td> <td style>' + obj.temp + '<\/td> <td style>' + obj.sound + '<\/td><td style>' + obj.status + '<\/td></tr>');
             }
             currentID = obj.id;
         });
