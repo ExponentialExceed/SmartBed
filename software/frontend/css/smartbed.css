@@ -8,3 +8,7 @@ body{
 	line-height: 30px;
 	font-size: 1.2em !important;
 }
+#logo{
+	width: 30px;
+	filter: invert(100%);
+}
