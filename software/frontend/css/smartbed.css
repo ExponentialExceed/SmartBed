@@ -13,3 +13,9 @@ body{
 	filter: invert(100%);
 	-webkit-filter: invert(100%);
 }
+.Good{
+	background: #33bf1e !important;
+}
+.Bad{
+	background: #bf4b1e !important;
+}
