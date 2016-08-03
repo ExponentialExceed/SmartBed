@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 
-	<title>Report-page</title>
+	<title>Report</title>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -24,7 +24,7 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-		    	<a class="navbar-brand" href="/">
+		    	<a class="navbar-brand logo" href="/">
 		    		<img id="logo" src="http://downloadicons.net/sites/default/files/bed-icon-80762.png"> Smart Bed</a>
 				<span id="time-label" class="navbar-brand"></span>
 			</div>
@@ -35,7 +35,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class="page-header">Log Sleeping</h1>
+			<h1 class="page-header">Report</h1>
 		</div>
 	</div>
 	<!--/.row-->
@@ -44,15 +44,14 @@
 	<div class="row">
 		<div class="col-lg-12">
 			<div class="panel panel-default">
-				<div class="panel-heading">Sleep time</div>
+				<div class="panel-heading">Log data</div>
 				<div class="panel-body">
 					<table id="table" data-toggle="table" data-url="tables/data1.json" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
 						<thead>
 							<tr>
 								<th data-field="time" data-sortable="true">Time</th>
-								<th data-field="temp" data-sortable="true">Temperature</th>
-								<th data-field="snore" data-sortable="true">Snore</th>
-								<th data-field="humid" data-sortable="true">Humidity</th>
+								<th data-field="temp" data-sortable="true">Temperature (°C) </th>
+								<th data-field="snore" data-sortable="true">Snore (dB) </th>
 								<th data-field="status" data-sortable="true">Status</th>
 							</tr>
 						</thead>
