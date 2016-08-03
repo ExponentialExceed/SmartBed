@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     var timeLabel = $('#time-label');
     var obj = null;
+
     var currentID = "";
 
     setInterval(function() {
@@ -24,7 +25,6 @@ $(document).ready(function() {
         // time
         var date = new Date();
         timeLabel.text(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "   " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
-
     }, 1000);
 
 });
