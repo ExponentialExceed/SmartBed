@@ -1,64 +1,80 @@
-var cal = function(obj) {
-    // sleep
-    if (obj.heat == 0) {
+// 0-17, 0 is 0% and 17 is 100%
+var calStatus = function(obj) {
+    // no sleep
+    if (obj.motion) {
+        if (checkSound(obj.sound) == 4) {
+            if (checkTemp(obj.temp) == 4) {
+                return 100;
+            } else if (checkTemp(obj.temp) == 3) {
+                return 88.2;
+            } else if (checkTemp(obj.temp) == 2) {
+                return 82.3;
+            } else if (checkTemp(obj.temp) == 1) {
+                return 76.4;
+            }
+        } else if (checksound(obj.temp) == 3) {
+            if (checkTemp(obj.temp) == 4) {
+                return 70.5;
+            } else if (checkTemp(obj.temp) == 3) {
+                return 64.7;
+            } else if (checkTemp(obj.temp) == 2) {
+                return 58.9;
+            } else if (checkTemp(obj.temp) == 1) {
+                return 53.0;
+            }
+        } else if (checksound(obj.temp) == 2) {
+            if (checkTemp(obj.temp) == 4) {
+                return 47.1;
+            } else if (checkTemp(obj.temp) == 3) {
+                return 41.2;
+            } else if (checkTemp(obj.temp) == 2) {
+                return 35.3;
+            } else if (checkTemp(obj.temp) == 1) {
+                return 29.4;
+            }
+        } else if (checksound(obj.temp) == 1) {
+            if (checkTemp(obj.temp) == 4) {
+                return 23.5;
+            } else if (checkTemp(obj.temp) == 3) {
+                return 17.6;
+            } else if (checkTemp(obj.temp) == 2) {
+                return 11.8;
+            } else if (checkTemp(obj.temp) == 1) {
+                return 5.9;
 
-        // no sleep
+            }
+        }
     } else {
-
+        return 0;
     }
-
-    obj.motion; // boolean !
-    obj.sound; //  boolean !
-    obj.temp; // value !
-    obj.hum; // value !
-    obj.heat; // value !
 }
 
 var checkTemp = function(value) {
     // cool
-    if (obj.temp < 20) {
-
+    if (value < 20) {
+        return 1;
         // normal
-    } else if (obj.temp < 25) {
-
+    } else if (value < 22) {
+        return 2;
         // hot
-    } else if (obj.temp < 35) {
-
-    }
-}
-
-var checkHum = function(value) {
-    // cool
-    if (obj.temp < 20) {
-
-        // normal
-    } else if (obj.temp < 25) {
-
-        // hot
-    } else if (obj.temp < 35) {
-
-        // hot hot
+    } else if (value < 25) {
+        return 3;
     } else {
-
+        return 4;
     }
 }
 
 var checkSound = function(value) {
-    // have sound
-    if (value) {
-
-        // no have sound
+    // cool
+    if (value < 20) {
+        return 1;
+        // normal
+    } else if (value < 35) {
+        return 2;
+        // hot
+    } else if (value < 50) {
+        return 3;
     } else {
-
-    }
-}
-
-var checkMotion = function(value) {
-    // have motion
-    if (value) {
-
-        // no have motion
-    } else {
-
+        return 4;
     }
 }
