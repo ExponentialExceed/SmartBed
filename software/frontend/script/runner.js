@@ -3,6 +3,8 @@ $(document).ready(function() {
 
     var timeLabel = $('#time-label');
     var obj = null;
+    var mL = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var mS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
     var currentID = "";
 
@@ -24,7 +26,7 @@ $(document).ready(function() {
 
         // time
         var date = new Date();
-        timeLabel.text(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "   " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
+        timeLabel.text(date.getDate() + " " + mS[date.getMonth()] + " " + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
     }, 1000);
 
 });
