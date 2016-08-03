@@ -1,26 +1,30 @@
 var obj = null;
-var currentID = "";
+var currentID = 0;
 var timeLabel = $('#time-label');
 var i = 0;
+var k = 0;
 
 $(document).ready(function() {
+    var arr = [];
     setInterval(function() {
         // server
-        $.ajax({url: 'http://10.32.176.4/Exponential/'}).done(function(data) {
-            obj = JSON.parse(data);
+        $.ajax({
+            url: 'http://10.32.176.4/Exponential/'
+        }).done(function(data) {
+            obj = JSON.parse(data)[0];
             if (obj.id != currentID) {
-              var k = 0;
-              var data = [];
-              console.log(obj);
-              setTimeout(function() {
-                data.push(calStatus(obj));
-                k++;
-              }, 1000);
-              while(k<12){
-                data.push(calStatus(obj));
-                k++;
-              }
-              set(data,12);
+                if (k < 12) {
+                    console.log(k);
+                    console.log(calStatus(obj));
+                    arr.push(calStatus(obj));
+                    k += 1;
+                    console.log(obj);
+                }
+                if (k == 12) {
+                    set(arr, 12);
+                    console.log(arr);
+                    k = 0;
+                }
             }
             currentID = obj.id;
         });
@@ -28,7 +32,7 @@ $(document).ready(function() {
         // time
         var date = new Date();
         timeLabel.text(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "   " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
-    }, 1000);
+    }, 3000);
 });
 
 
@@ -80,10 +84,6 @@ var calStatus = function(obj) {
     } else {
         return 100;
     }
-
-    obj.motion; // boolean !
-    obj.sound; //  boolean !
-    obj.temp; // value !
 }
 
 var checkTemp = function(value) {
