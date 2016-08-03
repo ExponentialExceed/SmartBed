@@ -28,10 +28,7 @@ $(document).ready(function() {
             currentID = obj.id;
         });
 
-        // time
-        var date = new Date();
-        $('#time-label').text(date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear() + "   " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
-    }, 3000);
+   }, 3000);
 });
 
 

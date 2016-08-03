@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 
-	<title>History-page</title>
+	<title>History</title>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/datepicker3.css" rel="stylesheet">
@@ -25,7 +25,7 @@
 	<script src="script/easypiechart.js"></script>
 	<script src="script/easypiechart-data.js"></script>
 	<script src="script/bootstrap-datepicker.js"></script>
-	<script src="script/runner.js"></script>
+	<script src="script/hisrunner.js"></script>
 </head>
 
 <body>
@@ -102,26 +102,14 @@
 	</div>
 	<!--/.row-->
 	<script type="text/javascript">
+        // time
 
-	var timeLabel = $('#time-label');
-	var addComponent = function(date, hour, status) {
-		$('#containers').append(
-			"<div class=\"row\"><div class=\"col-xs-6 col-md-4 col-lg-4\"><div class=\"panel panel-blue panel-widget \"><div class=\"row no-padding\"><div class=\"col-sm-3 col-lg-5 widget-left\"><svg class=\"glyph stroked calendar\"><use xlink:href=\"#stroked-calendar\"></use></svg></div><div class=\"col-sm-9 col-lg-7 widget-right\"><div class=\"large\">" +
-			date +
-			"</div><div class=\"text-muted\">Date</div></div></div></div></div><div class=\"col-xs-6 col-md-4 col-lg-4\"><div class=\"panel panel-orange panel-widget\"><div class=\"row no-padding\"><div class=\"col-sm-3 col-lg-5 widget-left\"><svg class=\"glyph stroked clock\"><use xlink:href=\"#stroked-clock\" /></svg></div><div class=\"col-sm-9 col-lg-7 widget-right\"><div class=\"large\">" +
-			hour +
-			"</div><div class=\"text-muted\">Sleep Hour</div></div></div></div></div><div class=\"col-xs-6 col-md-4 col-lg-4\"><div class=\"panel panel-teal panel-widget\"><div class=\"row no-padding\"><div class=\"col-sm-3 col-lg-5 widget-left "+status+"\"><svg class=\"glyph stroked dashboard-dial\"><use xlink:href=\"#stroked-dashboard-dial\"></use></svg></div><div class=\"col-sm-9 col-lg-7 widget-right\"><div class=\"large\">" +
-			status + "</div><div class=\"text-muted\">Status</div></div></div></div></div></div>");
-	}
 
-	addComponent("05/11/54", 5, "Good");
-	addComponent("06/11/54", 12, "Bad");
-	addComponent("07/11/54", 3, "Normal");
+	
 	</script>
 
 
 
-	</div>
 	<!--/.main-->
 
 

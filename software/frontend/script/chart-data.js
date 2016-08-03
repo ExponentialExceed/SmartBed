@@ -3,10 +3,10 @@ var randomScalingFactor = function() {
     return Math.round(Math.random() * 1000)
 };
 var lineChartData = {
-    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 12],
+    labels: ["Hour: 1", "Hour: 2", "Hour: 3", "Hour: 4", "Hour: 5", "Hour: 6", "Hour: 7", "Hour: 8", "Hour: 9", "Hour: 10", "Hour: 11", "Hour: 12"],
     datasets: [{
         label: "sleep",
-        fillColor: "rgba(48, 164, 255, 0.2)",
+        fillColor: "rgba(48, 164, 255, 0.135)",
         strokeColor: "rgba(48, 164, 255, 1)",
         pointColor: "rgba(48, 164, 255, 1)",
         pointStrokeColor: "#fff",
@@ -16,13 +16,14 @@ var lineChartData = {
     }]
 };
 
+
 var setdata = function(obj, value) {
     var date = new Date();
 
     lineChartData.labels = countHour(value);
     lineChartData.datasets = [{
-        label: "My Second dataset",
-        fillColor: "rgba(48, 164, 255, 0.2)",
+        label: "Sleep",
+        fillColor: "rgba(48, 164, 255, 0.135)",
         strokeColor: "rgba(48, 164, 255, 1)",
         pointColor: "rgba(48, 164, 255, 1)",
         pointStrokeColor: "#fff",
