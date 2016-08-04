@@ -1,16 +1,9 @@
 [
     {
-        "time": "12.01 AM",
+        "time": "6:15:29",
         "temp": 27,
-        "snore" : "40dB",
+        "snore" : "40",
         "humid": 20,
-        "status" : "sleep well"
-    },
-    {
-        "time": "3.01 AM",
-        "temp": 28,
-        "snore" : "30dB",
-        "humid": 22,
-        "status" : "sleep well"
+        "status" : "Sleep well"
     }
 ]
