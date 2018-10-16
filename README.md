@@ -6,13 +6,13 @@ My last project in eXceed. This project contains 2 parts, Software and Hardware.
 
 1. [Introduction](#introduction)
 2. [Sleep Information](#sleep-information)
-  - [First stage](#first-stage)
-  - [Second stage](#second-stage)
-  - [Last stage](#last-stage)
+    - [First stage](#first-stage)
+    - [Second stage](#second-stage)
+    - [Last stage](#last-stage)
 3. [Project detail](#project-detail)
-  - [Software](#software)
-    - [Development](#development)
-  - [Hardware](#hardware)
+    - [Software](#software)
+        - [Development](#development)
+    - [Hardware](#hardware)
 4. [Contributor](#who-work-on-this-project)
 
 ## Introduction
@@ -48,13 +48,14 @@ Basically, the software split to 2 parts, `analysic` and `frondend UI`. In the f
 
 #### Development
 
-To run the website locally, you have to run on the terminal/cmd by using this command `node server.js` in [software](software) folder. This require at least node 7^ and browser.
+To run the website locally, you have to run on the terminal/cmd by using this command `node server.js` in [software](software) folder. This require at least `node 7^` and `browser`.
 
 ### Hardware
 
 Basically, This is a bed which contain alarm clock and a lot of sensor to detech data and send to software to analize them and show on the website.
 
-The sensor that we use. 
+The sensor that we use.
+
 - temp sensor
 - motion sensor
 - sound sensor
